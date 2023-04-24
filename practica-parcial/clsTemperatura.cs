@@ -5,33 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
+using System.Windows.Forms;
+
 
 namespace practica_parcial
 {
     class clsTemperatura
     {
-        public DataSet DS;
-        String Tabla = "Temperaturas";
         private string Cadena = "";
         private OleDbConnection conexion;
         private OleDbCommand comando;
-        private OleDbDataAdapter Adaptador;
+        private OleDbDataAdapter adaptador;
         private DataTable Tabla;
+
         public clsTemperatura()
         {
-            
-       
-        }
-        public DataTable GetTemperaturas()
-        {
-            if (DS != null && DS.Tables.Count == 1)
-            {
-                return DS.Tables["Temperaturas"];
+            Cadena = "provider=microsoft.jet.oledb.4.0;data source=CLIMA.mdb";
+            conexion = new OleDbConnection(Cadena);
+            comando = new OleDbCommand();
 
-            }
-            return null;
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.TableDirect;
+            comando.CommandText = "Temperaturas";
+
+            adaptador = new OleDbDataAdapter(comando);
+            Tabla = new DataTable();
+            adaptador.Fill(Tabla);
         }
-    
+        public DataTable GetAll()
+        {
+            return Tabla;
+        }
+
+
+
     }
 
 }

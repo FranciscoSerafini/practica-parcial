@@ -6,39 +6,38 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
 
+
 namespace practica_parcial
 {
     class clsClima
     {
-       public DataSet DS;
-        String Tabla = "Localidades";
+        private string Cadena = "";
+        private OleDbConnection conexion;
+        private OleDbCommand comando;
+        private OleDbDataAdapter adaptador;
+        private DataTable Tabla;
+
+
         public clsClima()
         {
-            OleDbConnection conexion = new OleDbConnection();
-            conexion.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=Clima.mdb";
-            conexion.Open();
-            DS = new DataSet();
+            Cadena = "provider=microsoft.jet.oledb.4.0;data source=CLIMA.mdb";
+            conexion = new OleDbConnection(Cadena);
+            comando = new OleDbCommand();
+            
 
-            // tabla de clima
-            OleDbCommand cmd = new OleDbCommand();
-            cmd.Connection = conexion;
-            cmd.CommandType = CommandType.TableDirect;
-            cmd.CommandText = Tabla;
-            OleDbDataAdapter DA = new OleDbDataAdapter(cmd);
-            DA.Fill(DS, Tabla);
-            DataColumn[] pk = new DataColumn[1];
-            pk[0] = DS.Tables[Tabla].Columns["Localidades"];
-            DS.Tables[Tabla].PrimaryKey = pk;
-            OleDbCommandBuilder cb = new OleDbCommandBuilder(DA);
-            conexion.Close();
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.TableDirect;
+            comando.CommandText = "Localidades";
+
+            adaptador = new OleDbDataAdapter(comando);
+            Tabla = new DataTable();
+            adaptador.Fill(Tabla);
+
+
         }
-        public DataTable GetLocalidades()
+       public DataTable GetAll()
         {
-            if (DS != null && DS.Tables.Count == 1)
-            {
-                return DS.Tables["Localidades"];
-            }
-            return null;
+            return Tabla;
         }
 
     }

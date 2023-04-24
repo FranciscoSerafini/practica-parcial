@@ -8,3 +8,14 @@ C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.csproj.
 C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.exe
 C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.pdb
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica-parcial.csproj.AssemblyReference.cache
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica-parcial.csproj.SuggestedBindingRedirects.cache
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica_parcial.Form1.resources
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica_parcial.Properties.Resources.resources
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica-parcial.csproj.GenerateResource.cache
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica-parcial.csproj.CoreCompileInputs.cache
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica-parcial.exe
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\obj\Debug\practica-parcial.pdb
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\bin\Debug\practica-parcial.exe.config
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\bin\Debug\practica-parcial.exe
+C:\Users\franc\Source\Repos\practica-parcial\practica-parcial\bin\Debug\practica-parcial.pdb

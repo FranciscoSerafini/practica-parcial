@@ -12,6 +12,9 @@ namespace practica_parcial
 {
     public partial class Form1 : Form
     {
+        clsClima localidades;
+        clsTemperatura temperatura;
+        DataTable Tabla;
         public Form1()
         {
             InitializeComponent();
@@ -34,26 +37,35 @@ namespace practica_parcial
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            clsClima clima = new clsClima();
+            clsClima objClima = new clsClima();
+            //llenado de combo box
             cmbLocalidad.DisplayMember = "nombre";
             cmbLocalidad.ValueMember = "localidad";
-            cmbLocalidad.DataSource = clima.GetLocalidades();
-
-            clsTemperatura temperatura = new clsTemperatura();
-            
-
-
-            DateTime fecha = dtPFecha.Value.Date;
-            // la hora se guarda en formato hora:minutos,
-            // con la hora en formato 24 horas
-            
+            cmbLocalidad.DataSource = objClima.GetAll();
+            Tabla = objClima.GetAll();
 
 
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            int localidades = Convert.ToInt32(cmbLocalidad.SelectedValue);
+            Int32 localidad = Convert.ToInt32(cmbLocalidad.SelectedValue);
+            string Varfecha = dtPFecha.Text;
+
+            temperatura = new clsTemperatura();
+            Tabla = temperatura.GetAll();
+
+            foreach (DataRow fila in Tabla.Rows)
+            {
+                DateTime fechahora = Convert.ToDateTime(fila["fecha"]);
+                string fecha = fechahora.ToString("dd/MM/yyyy");
+
+                if (Varfecha == fecha)
+                {
+                    txtMaximo.Text = fila[2].ToString();
+                    txtMinimo.Text = fila[3].ToString();
+                }
+            }
             
         }
     }
