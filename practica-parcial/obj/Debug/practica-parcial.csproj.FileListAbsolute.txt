@@ -1,0 +1,10 @@
+C:\Users\Alumno\source\repos\practica-parcial\bin\Debug\practica-parcial.exe.config
+C:\Users\Alumno\source\repos\practica-parcial\bin\Debug\practica-parcial.exe
+C:\Users\Alumno\source\repos\practica-parcial\bin\Debug\practica-parcial.pdb
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.csproj.AssemblyReference.cache
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica_parcial.Form1.resources
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica_parcial.Properties.Resources.resources
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.csproj.GenerateResource.cache
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.exe
+C:\Users\Alumno\source\repos\practica-parcial\obj\Debug\practica-parcial.pdb
