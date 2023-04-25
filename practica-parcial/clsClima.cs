@@ -27,11 +27,11 @@ namespace practica_parcial
             conexion = new OleDbConnection(Cadena);
             comando = new OleDbCommand();
             
-
+            //configura el comando
             comando.Connection = conexion;
             comando.CommandType = CommandType.TableDirect;
             comando.CommandText = "Localidades";
-
+            //crea el adaptador
             adaptador = new OleDbDataAdapter(comando);
             Tabla = new DataTable();
             adaptador.Fill(Tabla);
