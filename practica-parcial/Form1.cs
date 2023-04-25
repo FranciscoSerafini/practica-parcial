@@ -15,6 +15,8 @@ namespace practica_parcial
         clsClima localidades;
         clsTemperatura temperatura;
         DataTable Tabla;
+        Int32 minima;
+        Int32 maxima;
         public Form1()
         {
             InitializeComponent();
@@ -41,30 +43,40 @@ namespace practica_parcial
             //llenado de combo box
             cmbLocalidad.DisplayMember = "nombre";
             cmbLocalidad.ValueMember = "localidad";
-            cmbLocalidad.DataSource = objClima.GetAll();
-            Tabla = objClima.GetAll();
+            cmbLocalidad.DataSource = objClima.GetAllClima();
+            Tabla = objClima.GetAllClima();
 
 
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            Int32 localidad = Convert.ToInt32(cmbLocalidad.SelectedValue);
-            string Varfecha = dtPFecha.Text;
+            Int32 LocSelecciona = Convert.ToInt32(cmbLocalidad.SelectedValue);
+            String FechaFormulario = dtPFecha.Value.ToString("dd/MM/yyyy");
 
-            temperatura = new clsTemperatura();
-            Tabla = temperatura.GetAll();
+            clsTemperatura Localidad = new clsTemperatura();
+            DataTable tabla =  Localidad.GetAllTemperatura();
 
-            foreach (DataRow fila in Tabla.Rows)
+            foreach (DataRow fila in tabla.Rows)
             {
-                DateTime fechahora = Convert.ToDateTime(fila["fecha"]);
-                string fecha = fechahora.ToString("dd/MM/yyyy");
-
-                if (Varfecha == fecha)
+                if (Convert.ToInt32(fila["localidad"]) == LocSelecciona)
                 {
-                    txtMaximo.Text = fila[2].ToString();
-                    txtMinimo.Text = fila[3].ToString();
+                    DateTime fechaBase = Convert.ToDateTime(fila["fecha"]); //fecha de base de datos
+                    string fechaFormBase = fechaBase.ToString("dd/MM/yyyy");
+                    if (FechaFormulario == fechaFormBase)
+                    {
+                        minima = Convert.ToInt32(fila["minima"]);
+                        maxima = Convert.ToInt32(fila["maxima"]);
+
+
+                    }
+
+
                 }
+
+                txtMinimo.Text = Convert.ToString(minima);
+                txtMaximo.Text = Convert.ToString(maxima);
+
             }
             
         }

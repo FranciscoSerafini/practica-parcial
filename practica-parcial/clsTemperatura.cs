@@ -32,7 +32,7 @@ namespace practica_parcial
             Tabla = new DataTable();
             adaptador.Fill(Tabla);
         }
-        public DataTable GetAll()
+        public DataTable GetAllTemperatura()
         {
             return Tabla;
         }

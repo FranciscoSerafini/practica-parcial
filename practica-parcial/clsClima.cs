@@ -35,7 +35,7 @@ namespace practica_parcial
 
 
         }
-       public DataTable GetAll()
+       public DataTable GetAllClima()
         {
             return Tabla;
         }
