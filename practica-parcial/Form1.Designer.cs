@@ -66,7 +66,7 @@ namespace practica_parcial
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 148);
+            this.label3.Location = new System.Drawing.Point(13, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 2;
@@ -77,15 +77,16 @@ namespace practica_parcial
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 84);
+            this.label4.Location = new System.Drawing.Point(13, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtMinimo
             // 
-            this.txtMinimo.Location = new System.Drawing.Point(82, 150);
+            this.txtMinimo.Location = new System.Drawing.Point(82, 153);
             this.txtMinimo.Name = "txtMinimo";
             this.txtMinimo.Size = new System.Drawing.Size(130, 20);
             this.txtMinimo.TabIndex = 4;
@@ -99,7 +100,7 @@ namespace practica_parcial
             // 
             // dtPFecha
             // 
-            this.dtPFecha.Location = new System.Drawing.Point(82, 83);
+            this.dtPFecha.Location = new System.Drawing.Point(82, 94);
             this.dtPFecha.Name = "dtPFecha";
             this.dtPFecha.Size = new System.Drawing.Size(200, 20);
             this.dtPFecha.TabIndex = 6;
@@ -138,7 +139,7 @@ namespace practica_parcial
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.label1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -57,7 +57,7 @@ namespace practica_parcial
             clsTemperatura Localidad = new clsTemperatura();
             DataTable tabla =  Localidad.GetAllTemperatura();
 
-            foreach (DataRow fila in tabla.Rows)
+            foreach (DataRow fila in tabla.Rows) //tipo de dato, variable,
             {
                 if (Convert.ToInt32(fila["localidad"]) == LocSelecciona)
                 {
@@ -79,6 +79,11 @@ namespace practica_parcial
 
             }
             
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

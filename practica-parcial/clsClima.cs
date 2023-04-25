@@ -11,13 +11,16 @@ namespace practica_parcial
 {
     class clsClima
     {
+        //declaramos las cadenas de conexion 
+
         private string Cadena = "";
+        //
         private OleDbConnection conexion;
         private OleDbCommand comando;
         private OleDbDataAdapter adaptador;
         private DataTable Tabla;
 
-
+        //creamos el constructor:
         public clsClima()
         {
             Cadena = "provider=microsoft.jet.oledb.4.0;data source=CLIMA.mdb";
@@ -36,9 +39,9 @@ namespace practica_parcial
 
         }
        public DataTable GetAllClima()
-        {
+       {
             return Tabla;
-        }
+       }
 
     }
 }
