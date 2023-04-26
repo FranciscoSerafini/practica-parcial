@@ -1,0 +1,11 @@
+C:\Users\franc\source\repos\practica-parcial-jugadores\bin\Debug\practica-parcial-jugadores.exe.config
+C:\Users\franc\source\repos\practica-parcial-jugadores\bin\Debug\practica-parcial-jugadores.exe
+C:\Users\franc\source\repos\practica-parcial-jugadores\bin\Debug\practica-parcial-jugadores.pdb
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica-parcial-jugadores.csproj.AssemblyReference.cache
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica-parcial-jugadores.csproj.SuggestedBindingRedirects.cache
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica_parcial_jugadores.frmPrincipal.resources
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica_parcial_jugadores.Properties.Resources.resources
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica-parcial-jugadores.csproj.GenerateResource.cache
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica-parcial-jugadores.csproj.CoreCompileInputs.cache
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica-parcial-jugadores.exe
+C:\Users\franc\source\repos\practica-parcial-jugadores\obj\Debug\practica-parcial-jugadores.pdb
